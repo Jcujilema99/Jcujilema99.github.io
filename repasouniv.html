@@ -76,14 +76,14 @@
       color: #ffffff;
     }
 
-    /* Botones flotantes */
+    /* Botones flotantes móviles */
     .botones-flotantes {
       position: fixed;
-      bottom: 20px;
       right: 15px;
+      bottom: 20px;
       display: flex;
-      flex-direction: column-reverse;
-      gap: 10px;
+      flex-direction: column;
+      gap: 12px;
       z-index: 9999;
     }
 
@@ -92,16 +92,30 @@
       color: white;
       border: none;
       border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      font-size: 1.2em;
+      width: 52px;
+      height: 52px;
+      font-size: 1.3em;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     .botones-flotantes button:hover {
       background: #00b4d8;
+    }
+
+    @media screen and (max-width: 480px) {
+      .botones-flotantes {
+        right: 10px;
+        bottom: 15px;
+        gap: 10px;
+      }
+
+      .botones-flotantes button {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -141,13 +155,10 @@
     <iframe src="https://wordwall.net/es/embed/e84e7f4c134b4dfdab4fcdc114054b6b?themeId=48&templateId=5&fontStackId=0" allowfullscreen></iframe>
   </section>
 
-  <!-- ESPACIO EXTRA PARA MÓVILES -->
-  <div style="height: 120px;"></div>
-
   <!-- BOTONES FLOTANTES -->
   <div class="botones-flotantes">
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆️</button>
-    <button onclick="window.scrollBy(0, 400)">⬇️</button>
+    <button onclick="window.scrollBy({ top: 400, behavior: 'smooth' })">⬇️</button>
   </div>
 
   <!-- PIE DE PÁGINA -->
