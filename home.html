@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matekids - Inicio</title>
+  <link rel="stylesheet" href="CSS/home.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>🎉 Bienvenidos a Matekids 🎉</h1>
+    <nav>
+      <a href="/repasouniv.html">🔁 Repaso Universal</a>
+    </nav>
+  </header>
+
+    <!-- FRASE MOTIVADORA -->
+  <section class="frase-mate card-frase">
+    <h3>🌟 Frase del Día</h3>
+    <blockquote>
+      <p id="frase-dia">Cargando frase...</p>
+    </blockquote>
+    <span class="autor-frase">– By. Jonathan Israel</span>
+  </section>
+
+  <!-- INTRODUCCIÓN -->
+  <section class="intro card">
+    <h2>📘 ¿Por qué son importantes las Matemáticas?</h2>
+    <p>
+      Las matemáticas están en los juegos, la música, los deportes ¡y hasta en la cocina! Aprenderlas desarrolla tu mente, tu creatividad y tu lógica. Aquí aprenderás jugando y resolviendo retos que te harán pensar y divertirte 🎮📚.
+    </p>
+    <img src="https://i.pinimg.com/736x/c4/31/c5/c431c56f4a97718e4a60fedc1b9b12b9.jpg" alt="Niños aprendiendo matemáticas" class="img-mate" />
+  </section>
+
+  <!-- ACCESO POR GRADO -->
+  <section class="actividades card">
+    <h3>📚 Accede a tus actividades</h3>
+    <div class="grados">
+      <a href="5/index.html" class="btn-grad">🎲</a>
+      <a href="6/index.html" class="btn-grad">🎯</a>
+      <a href="7/index.html" class="btn-grad">🔢</a>
+    </div>
+  </section>
+
+  <!-- VIDEO O PREZI EMBEBIDO -->
+  <section class="genially-section card">
+    <h3>🎥 Aplicaciones de las Matemáticas en la vida real</h3>
+    <iframe src="https://prezi.com/p/embed/ec5smyloai_r/" allowfullscreen></iframe>
+  </section>
+
+  <!-- ¿SABÍAS QUÉ...? -->
+  <section class="sabias card">
+    <h3>🔍 ¿Sabías qué?</h3>
+    <ul>
+      <li>🔢 El número Pi (π) ¡nunca termina!</li>
+      <li>🪐 El cero fue inventado en la India hace más de 1.500 años.</li>
+      <li>🧩 Resolver acertijos mejora tu memoria.</li>
+    </ul>
+  </section>
+
+  <!-- MINI TRIVIA -->
+  <section class="trivia card">
+    <h3>🧠 Mini Trivia Matemática</h3>
+    <p>¿Cuánto es 8 × 7?</p>
+    <button onclick="respuesta(56)">56</button>
+    <button onclick="respuesta(49)">49</button>
+    <button onclick="respuesta(64)">64</button>
+    <div id="resultado-trivia"></div>
+  </section>
+
+  <!-- JUEGO SIMPLE: ADIVINA EL NÚMERO -->
+  <section class="juego card">
+    <h3>🎮 Juego: Adivina el número</h3>
+    <p>Piensa en un número del 1 al 10. ¿Es <strong>5</strong>? 😏</p>
+    <button onclick="alert('¡Era una broma! Tú elige uno y trata de adivinarlo tú mismo 😄')">¡Jugar!</button>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="creditos">Matekids desarrollado por Ing. Jonathan Israel Cujilema Yunda</div>
+    <img src="img/JC.png" alt="Foto del profe" class="foto-profe" />
+    <p>💡 ¡Gracias por ser parte de esta aventura matemática!</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function respuesta(valor) {
+      const r = document.getElementById("resultado-trivia");
+      if (valor === 56) {
+        r.innerHTML = "✅ ¡Correcto! Muy bien 💪";
+        r.style.color = "green";
+      } else {
+        r.innerHTML = "❌ Ups... ¡Intenta de nuevo!";
+        r.style.color = "red";
+      }
+    }
+
+    // FRASES ALEATORIAS
+const frases = [
+  "Las matemáticas no son difíciles... ¡son un reto divertido para tu mente! 🧠💪",
+  "Cada número tiene una historia, ¡descúbrela resolviendo! 📖➗",
+  "Sumar sonrisas también es parte de las matemáticas 😄➕",
+  "Piensa, juega y multiplica tu ingenio 🔢🎲",
+  "Los problemas matemáticos no se escapan si los enfrentas con lógica y valentía 🧠🦸‍♂️",
+  "Con cada cálculo, tu cerebro se vuelve más poderoso 💥🧮",
+  "Las matemáticas son como un superpoder… ¡y tú lo estás entrenando! 🦸‍♀️🔢",
+  "Resolver un problema es como ganar un nivel en un juego 🎮🎯",
+  "Las fracciones no muerden… ¡solo se dividen! 🟰🍰",
+  "Tu mente crece con cada suma que haces 📈➕",
+  "La lógica es la linterna que ilumina el camino de los números 🔦🧠",
+  "¡Atrévete a equivocarte! Así también se aprende en matemáticas 🚀✏️",
+  "Cada número es una pista… ¡y tú eres el detective! 🕵️‍♂️🔍",
+  "Las matemáticas están en tu música, tus juegos y tus pasos 🥁🎲👟",
+  "Una mente curiosa siempre suma más conocimiento 🤔➕📘",
+  "Multiplica tu alegría aprendiendo algo nuevo cada día ✨✖️😊",
+  "Matemáticas + imaginación = diversión garantizada 🎨➗🎉",
+  "Tu esfuerzo es la clave para abrir el tesoro del saber 🗝️📚",
+  "¡No te rindas! Hasta los genios matemáticos comenzaron con el 1️⃣",
+  "Cada problema resuelto es una estrella más en tu universo 💫🧮"
+];
+
+
+    // Mostrar frase aleatoria
+    document.addEventListener("DOMContentLoaded", () => {
+      const frase = frases[Math.floor(Math.random() * frases.length)];
+      document.getElementById("frase-dia").textContent = `“${frase}”`;
+    });
+  </script>
+</body>
+</html>
