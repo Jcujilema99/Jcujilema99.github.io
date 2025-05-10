@@ -1,10 +1,12 @@
 /* ----- ESTILO GENERAL ----- */
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #e3f2fd, #ffffff);
   color: #333;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* ----- ENCABEZADO ----- */
@@ -22,6 +24,7 @@ header h1 {
   text-shadow: 2px 2px 4px #00000066;
 }
 
+/* ----- NAVEGACIÓN ----- */
 nav {
   margin-top: 15px;
   display: flex;
@@ -36,7 +39,7 @@ nav a {
   border-radius: 10px;
   background: #ffffffcc;
   color: #0077b6;
-  font-weight: bold;
+  font-weight: 600;
   transition: 0.3s;
 }
 
@@ -54,6 +57,7 @@ nav a:hover {
 .intro h2 {
   font-size: 1.8em;
   color: #0077b6;
+  font-weight: 700;
 }
 
 .intro p {
@@ -74,6 +78,7 @@ nav a:hover {
   color: #023e8a;
 }
 
+/* ----- BOTÓN GRADIENTE ----- */
 .btn-grad {
   display: inline-block;
   margin: 10px;
@@ -84,6 +89,7 @@ nav a:hover {
   border: none;
   border-radius: 12px;
   text-decoration: none;
+  font-weight: 600;
   transition: transform 0.3s;
 }
 
@@ -91,6 +97,8 @@ nav a:hover {
   transform: scale(1.05);
   background: linear-gradient(90deg, #48cae4, #0077b6);
 }
+
+/* ----- IMAGEN ----- */
 .img-mate {
   width: 100%;
   max-width: 400px;
@@ -101,7 +109,7 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ----- RECURSO GENIALLY ----- */
+/* ----- GENIALLY ----- */
 .genially-section {
   padding: 20px;
   text-align: center;
@@ -152,7 +160,7 @@ footer {
 /* ----- RESPONSIVE DESIGN ----- */
 @media screen and (max-width: 768px) {
   header h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .intro h2,
@@ -167,15 +175,15 @@ footer {
     width: 80%;
   }
 
-  .creditos, .foto-profe {
+  .creditos,
+  .foto-profe {
     position: static;
     display: block;
     margin: 10px auto;
   }
 }
 
-
-/* ----- TARJETAS EDUCATIVAS ----- */
+/* ----- TARJETAS ----- */
 .card {
   background: #ffffff;
   border-radius: 15px;
@@ -203,6 +211,7 @@ footer {
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s;
+  font-weight: 600;
 }
 
 .trivia button:hover,
@@ -210,12 +219,10 @@ footer {
   background-color: #0077b6;
 }
 
-/* Resultado trivia */
 #resultado-trivia {
   margin-top: 10px;
   font-weight: bold;
 }
-
 
 /* ----- FRASE MOTIVADORA ----- */
 .card-frase {
@@ -243,7 +250,7 @@ footer {
   font-size: 1em;
 }
 
-/* Animación flotante suave */
+/* ----- ANIMACIÓN ----- */
 @keyframes float {
   0%   { transform: translateY(0px); }
   50%  { transform: translateY(-5px); }
