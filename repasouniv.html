@@ -1,11 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Repaso Universal - Matekids</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="../CSS/home.css" />
   <style>
     .intro-univ {
@@ -77,6 +76,34 @@
     footer a:hover {
       color: #ffffff;
     }
+
+    /* Botones flotantes */
+    .botones-flotantes {
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .botones-flotantes button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.2em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .botones-flotantes button:hover {
+      background: #00b4d8;
+    }
   </style>
 </head>
 <body>
@@ -90,29 +117,42 @@
     <br>
     <a href="home.html">🏠 Volver al inicio</a>
   </section>
+
   <!-- GALERÍA DE ACTIVIDADES -->
   <h3 class="titulo">🌟 Recursos Interactivos 🌟</h3>
   <section class="galeria-juegos">
-    <iframe style="max-width:100%" src="https://wordwall.net/es/embed/6e02b09d4481407c8f70c4ee3fb08921?themeId=1&templateId=22&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/dd9d4bcb55dc493c8e63169d54e85905?themeId=44&templateId=46&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/3921c9c8a90e434d9ae3e5f3dd911c22?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/62d7140fcc60455796d7be347cc739a6?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/c5756d2e92684deda4527c4ba6518bb9?themeId=2&templateId=30&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/da5153e4b6c945e5837696709286d6ea?themeId=1&templateId=5&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/ca979db27fa242f2a8f8f0da871a80d1?themeId=1&templateId=3&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/4b0439234e14497dbae938c349205d61?themeId=26&templateId=5&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/301109ab0ba3461abcbfb55fa485794f?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/b2db0a91425947b9931bf8910933d04c?themeId=1&templateId=5&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/cd363838026f4df49a76bce71b31056f?themeId=1&templateId=8&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/c0dabdb743aa4827a0d395e16331fe85?themeId=62&templateId=70&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/9aadb0f9fd624a0aa4f193f9368e0e6b?themeId=22&templateId=71&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/37f11ce18bad4caa85b6a5a7bb69488f?themeId=1&templateId=11&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/97edf6c83a2c4c098368af1849f37eea?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/ea2698612362419b8312f0e34bd23f32?themeId=1&templateId=3&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/d609cd0c4fa54a9ea28add2dc7caa6f2?themeId=21&templateId=30&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/3fbd976563eb4b4e83e7bb5b550d4e2f?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe><br>
-    <iframe src="https://wordwall.net/es/embed/e84e7f4c134b4dfdab4fcdc114054b6b?themeId=48&templateId=5&fontStackId=0" allowfullscreen></iframe><br>
+    <!-- Aquí van los iframes de Wordwall como los que ya tienes -->
+    <!-- Ejemplo -->
+    <iframe src="https://wordwall.net/es/embed/6e02b09d4481407c8f70c4ee3fb08921?themeId=1&templateId=22&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/dd9d4bcb55dc493c8e63169d54e85905?themeId=44&templateId=46&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/3921c9c8a90e434d9ae3e5f3dd911c22?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/62d7140fcc60455796d7be347cc739a6?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/c5756d2e92684deda4527c4ba6518bb9?themeId=2&templateId=30&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/da5153e4b6c945e5837696709286d6ea?themeId=1&templateId=5&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/ca979db27fa242f2a8f8f0da871a80d1?themeId=1&templateId=3&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/4b0439234e14497dbae938c349205d61?themeId=26&templateId=5&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/301109ab0ba3461abcbfb55fa485794f?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/b2db0a91425947b9931bf8910933d04c?themeId=1&templateId=5&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/cd363838026f4df49a76bce71b31056f?themeId=1&templateId=8&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/c0dabdb743aa4827a0d395e16331fe85?themeId=62&templateId=70&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/9aadb0f9fd624a0aa4f193f9368e0e6b?themeId=22&templateId=71&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/37f11ce18bad4caa85b6a5a7bb69488f?themeId=1&templateId=11&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/97edf6c83a2c4c098368af1849f37eea?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/ea2698612362419b8312f0e34bd23f32?themeId=1&templateId=3&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/d609cd0c4fa54a9ea28add2dc7caa6f2?themeId=21&templateId=30&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/3fbd976563eb4b4e83e7bb5b550d4e2f?themeId=21&templateId=69&fontStackId=0" allowfullscreen></iframe>
+    <iframe src="https://wordwall.net/es/embed/e84e7f4c134b4dfdab4fcdc114054b6b?themeId=48&templateId=5&fontStackId=0" allowfullscreen></iframe>
+    <!-- ... (otros iframes) ... -->
   </section>
+
+  <!-- ESPACIO EXTRA PARA MÓVILES -->
+  <div style="height: 120px;"></div>
+
+  <!-- BOTONES FLOTANTES -->
+  <div class="botones-flotantes">
+    <button onclick="window.scrollBy(0, 400)">⬇️</button>
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆️</button>
+  </div>
 
   <!-- PIE DE PÁGINA -->
   <footer>
